@@ -139,7 +139,7 @@ a
     grid-gap: 10px;
     padding: 15px;
 }
-.item4
+.item4,.item1,.item2,.item3,.item5,.item6
 {
     position: relative;
 }
@@ -149,47 +149,49 @@ a
     height: 100%;
 }
 
-.item7,.item8,.item9
+.item7
 {
     display: none;
-}
-.item4:hover .item7,.item8,.item9
-{
-    display: block;
     position: absolute;
 }
-.item4:hover .item7
+.item4:hover .item7,.item1:hover .item7,.item2:hover .item7,.item3:hover .item7,.item5:hover .item7,.item6:hover .item7
 {
+    display :block;
+    opacity: 1;
     font-size: 20px;
     color: white;
     height: 100%;
-    width: 100%;
+    width: 100%; 
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: black;
     opacity: 0.7;
 }
-.item4:hover .item8
+.item4:hover::before,.item1:hover::before,.item2:hover::before,.item3:hover::before,.item5:hover::before,.item6:hover::before
 {
-    right: 10px;
-    top:10px;
-    border-top: 4px solid white;
-    border-right: 4px solid white;
-    height: 30%;
-    width: 30%;
-    margin-left: 10px;
+    content: "";
+    position: absolute;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    height: 40%;
+    width: 25%;
+    top: 10px;
+    right:10px;
+    z-index: 2;
 }
 
-.item4:hover .item9
+.item4:hover::after,.item1:hover::after,.item2:hover::after,.item3:hover::after,.item5:hover::after,.item6:hover::after
 {
+    content: "";
     position: absolute;
-    width: 30%;
-    height:30%;
-    left: 10px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    height: 40%;
+    width: 25%;
     bottom: 10px;
-    border-bottom: 4px solid white;
-    border-left: 4px solid white;
+    left:10px;
+    z-index: 2;
 }
 @media screen and (min-width: 900px) {
     .main_first
